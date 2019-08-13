@@ -1,5 +1,5 @@
 <?php
-
+require 'admin.php';
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,10 +11,8 @@
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
 });
-
- Route::view('/admin', 'admin.dashboard.index');
-
+*/
 
