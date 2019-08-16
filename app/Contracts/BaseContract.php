@@ -1,4 +1,5 @@
 <?php
+namespace App\Contracts;
 /**
  * Interface BaseContract
  * @package App\Contracts
