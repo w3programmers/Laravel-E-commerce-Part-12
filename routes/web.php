@@ -1,5 +1,5 @@
 <?php
-require 'admin.php';
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,4 +15,7 @@ require 'admin.php';
     return view('welcome');
 });
 */
+Route::view('/', 'site.pages.homepage');
+Auth::routes();
+require 'admin.php';
 
