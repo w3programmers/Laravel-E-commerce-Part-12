@@ -18,7 +18,7 @@ class CreateAttributeValuesTable extends Migration
             $table->unsignedBigInteger('attribute_id');
             $table->foreign('attribute_id')->references('id')->on('attributes');
             $table->text('value');
-            $table->decimal('price', 5)->nullable();
+            $table->decimal('price', 6)->nullable();
             $table->timestamps();
         });
     }
