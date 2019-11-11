@@ -2,12 +2,14 @@
 
 namespace App\Models;
 
+use TypiCMS\NestableTrait;
 use App\Models\Product;
 use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Model;
 
 class Category extends Model
 {
+    use NestableTrait;
     /**
      * @var string
      */
@@ -52,6 +54,14 @@ class Category extends Model
     public function parent()
     {
         return $this->belongsTo(Category::class, 'parent_id');
+    }
+
+     /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function products()
+    {
+        return $this->belongsToMany(Product::class, 'product_categories', 'category_id', 'product_id');
     }
 
 }
